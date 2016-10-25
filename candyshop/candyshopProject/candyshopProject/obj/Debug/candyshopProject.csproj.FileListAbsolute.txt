@@ -1,0 +1,11 @@
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\bin\Debug\candyshopProject.exe.config
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\bin\Debug\candyshopProject.exe
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\bin\Debug\candyshopProject.pdb
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.csprojResolveAssemblyReference.cache
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.Properties.Resources.resources
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.csproj.GenerateResource.Cache
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.exe
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.pdb
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.frmMainEnter.resources
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.frmWorkshop.resources
+C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.frmShop.resources
