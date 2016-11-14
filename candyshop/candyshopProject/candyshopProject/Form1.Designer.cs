@@ -37,6 +37,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.btnMainEnter = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,12 +129,32 @@
             this.btnMainEnter.UseVisualStyleBackColor = true;
             this.btnMainEnter.Click += new System.EventHandler(this.btnMainEnter_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(459, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 15);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(463, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 15);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "label6";
+            // 
             // frmMainEnter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 412);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnMainEnter);
             this.Controls.Add(this.txtBoxPassword);
             this.Controls.Add(this.label4);
@@ -165,6 +187,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBoxPassword;
         private System.Windows.Forms.Button btnMainEnter;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
