@@ -30,40 +30,30 @@ namespace candyshopProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label6.Text = "";
-            string pas1 = "abcd";
-            string pas2 = "ab";
-            MemoryStream stream1;
-            stream1 = getStreamFromString(pas1);
-            MemoryStream stream2;
-           stream2 = getStreamFromString(pas2);
-            SHA1 sha = new SHA1CryptoServiceProvider();
-            
-            // This is one implementation of the abstract class SHA1.
-            string res1;
-            string res2;
-
-            sha.ComputeHash(stream1);
-            res1 = Convert.ToBase64String(sha.Hash);
-            sha.ComputeHash(stream2);
-            res2 = Convert.ToBase64String(sha.Hash);
-
-
-            //            res1 = Convert.ToBase64String(sha.ComputeHash(stream1));
-            //          res2 = Convert.ToBase64String(sha.ComputeHash(stream2));
-
-            // bool b1 = res1.Equals(res2);
-
-            label5.Text = res1;
-            label6.Text = res2;
-            
-              // label6.Text = b1.ToString();
             
 
         }
 
-      
+        public Guid GetHashString(string s)
+        {
+            //переводим строку в байт-массим  
+            byte[] bytes = Encoding.Unicode.GetBytes(s);
 
+            //создаем объект для получения средст шифрования  
+            MD5CryptoServiceProvider CSP =
+                new MD5CryptoServiceProvider();
+
+            //вычисляем хеш-представление в байтах  
+            byte[] byteHash = CSP.ComputeHash(bytes);
+
+            string hash = string.Empty;
+
+            //формируем одну цельную строку из массива  
+            foreach (byte b in byteHash)
+                hash += string.Format("{0:x2}", b);
+
+            return new Guid(hash);
+        }
         private void btnMainEnter_Click(object sender, EventArgs e)
         {
             string username;
@@ -86,6 +76,26 @@ namespace candyshopProject
              }
            
                 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label6.Text = "";
+            string pas1 = "abcd";
+            string pas2 = "Abcd";
+            label5.Text = GetHashString(pas1).ToString();
+            label6.Text = GetHashString(pas2).ToString();
+            if (label5.Text == label6.Text)
+            {
+
+                label7.Text = "TRUE!!!!!!!!!";
+
+            }
+            else
+            {
+                label7.Text = "false!!!((";
+            }
+
         }
     }
 }
