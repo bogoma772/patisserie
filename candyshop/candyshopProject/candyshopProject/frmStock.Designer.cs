@@ -1,6 +1,6 @@
 ﻿namespace candyshopProject
 {
-    partial class frmWorkshop
+    partial class frmStock
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkshop));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStock));
             this.menu1Range = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menu2PersonalOrder = new System.Windows.Forms.Panel();

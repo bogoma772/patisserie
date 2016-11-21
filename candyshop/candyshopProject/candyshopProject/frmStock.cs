@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace candyshopProject
 {
-    public partial class frmWorkshop : Form
+    public partial class frmStock : Form
     {
-        public frmWorkshop()
+        public frmStock()
         {
             InitializeComponent();
         }

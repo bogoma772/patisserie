@@ -12,9 +12,9 @@ using System.IO;
 
 namespace candyshopProject
 {
-    public partial class frmMainEnter : Form
+    public partial class FrmMainEnter : Form
     {
-        public frmMainEnter()
+        public FrmMainEnter()
         {
             InitializeComponent();
         }
@@ -69,7 +69,7 @@ namespace candyshopProject
                     }
                 case "workshop":
                     {
-                        frmWorkshop f = new frmWorkshop();
+                        frmStock f = new frmStock();
                         f.ShowDialog();
                         break;
                     }

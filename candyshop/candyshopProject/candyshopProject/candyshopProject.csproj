@@ -46,11 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="authenticationComponent.cs" />
+    <Compile Include="candyshopFacade.cs" />
+    <Compile Include="dbProvider.cs" />
+    <Compile Include="FrmMainEnter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmMainEnter.Designer.cs">
+      <DependentUpon>FrmMainEnter.cs</DependentUpon>
     </Compile>
     <Compile Include="frmShop.cs">
       <SubType>Form</SubType>
@@ -58,22 +61,25 @@
     <Compile Include="frmShop.Designer.cs">
       <DependentUpon>frmShop.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWorkshop.cs">
+    <Compile Include="frmStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWorkshop.Designer.cs">
-      <DependentUpon>frmWorkshop.cs</DependentUpon>
+    <Compile Include="frmStock.Designer.cs">
+      <DependentUpon>frmStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="shopSubsystem.cs" />
+    <Compile Include="statsComponent.cs" />
+    <Compile Include="stockSubsystem.cs" />
+    <EmbeddedResource Include="FrmMainEnter.resx">
+      <DependentUpon>FrmMainEnter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShop.resx">
       <DependentUpon>frmShop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWorkshop.resx">
-      <DependentUpon>frmWorkshop.cs</DependentUpon>
+    <EmbeddedResource Include="frmStock.resx">
+      <DependentUpon>frmStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
