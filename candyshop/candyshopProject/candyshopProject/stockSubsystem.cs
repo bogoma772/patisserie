@@ -20,7 +20,9 @@ public class stockSubsystem {
 
     public void ShowFrm() // показываем форму
     {
-        // надо ли?
+        myFormStock.frmStock_Load(myDbProvider);
+        myFormStock.ShowDialog();
+        
     }
     // еще методы???
     public stockSubsystem(dbProvider currentDbProvider) // конструктор
@@ -28,6 +30,7 @@ public class stockSubsystem {
         // создаем форму myFormStock
         // создаем myStatsComponent
         myDbProvider = currentDbProvider; // передаем ссылку на БД коннектор
+        myFormStock = new frmStock();
 
     }
 

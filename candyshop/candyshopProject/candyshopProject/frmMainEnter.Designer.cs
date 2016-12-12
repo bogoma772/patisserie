@@ -37,11 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.btnMainEnter = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -80,7 +80,7 @@
             // txtBoxUserName
             // 
             this.txtBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxUserName.Location = new System.Drawing.Point(277, 180);
+            this.txtBoxUserName.Location = new System.Drawing.Point(275, 145);
             this.txtBoxUserName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBoxUserName.Name = "txtBoxUserName";
             this.txtBoxUserName.Size = new System.Drawing.Size(163, 24);
@@ -92,7 +92,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(281, 152);
+            this.label3.Location = new System.Drawing.Point(281, 120);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 22);
@@ -103,7 +103,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(320, 209);
+            this.label4.Location = new System.Drawing.Point(324, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 22);
             this.label4.TabIndex = 5;
@@ -112,7 +112,7 @@
             // txtBoxPassword
             // 
             this.txtBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxPassword.Location = new System.Drawing.Point(275, 236);
+            this.txtBoxPassword.Location = new System.Drawing.Point(275, 199);
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.PasswordChar = '●';
             this.txtBoxPassword.Size = new System.Drawing.Size(163, 24);
@@ -123,7 +123,7 @@
             // btnMainEnter
             // 
             this.btnMainEnter.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMainEnter.Location = new System.Drawing.Point(277, 280);
+            this.btnMainEnter.Location = new System.Drawing.Point(275, 289);
             this.btnMainEnter.Name = "btnMainEnter";
             this.btnMainEnter.Size = new System.Drawing.Size(161, 49);
             this.btnMainEnter.TabIndex = 7;
@@ -131,53 +131,44 @@
             this.btnMainEnter.UseVisualStyleBackColor = true;
             this.btnMainEnter.Click += new System.EventHandler(this.btnMainEnter_Click);
             // 
-            // label5
+            // panel1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(459, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 15);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Location = new System.Drawing.Point(280, 233);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(158, 41);
+            this.panel1.TabIndex = 12;
             // 
-            // label6
+            // radioButton2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(463, 160);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 15);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "label6";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(74, 12);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(60, 19);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Магазин";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // radioButton1
             // 
-            this.button1.Location = new System.Drawing.Point(466, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 41);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(15, 12);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(43, 19);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Цех";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(485, 323);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 15);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "label7";
-            // 
-            // frmMainEnter
+            // FrmMainEnter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 412);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnMainEnter);
             this.Controls.Add(this.txtBoxPassword);
             this.Controls.Add(this.label4);
@@ -195,6 +186,8 @@
             this.TransparencyKey = System.Drawing.SystemColors.WindowFrame;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,10 +203,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBoxPassword;
         private System.Windows.Forms.Button btnMainEnter;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 

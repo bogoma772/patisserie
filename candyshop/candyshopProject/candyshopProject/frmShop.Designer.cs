@@ -37,7 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabRange = new System.Windows.Forms.TabPage();
+            this.dgvRange = new System.Windows.Forms.DataGridView();
             this.tabCashbox = new System.Windows.Forms.TabPage();
+            this.dgvCashbox = new System.Windows.Forms.DataGridView();
             this.tabPersonalOrder = new System.Windows.Forms.TabPage();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnPreCost = new System.Windows.Forms.Button();
@@ -55,14 +57,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtBoxFIO = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.menu3PersonalOrder.SuspendLayout();
             this.menu2Cashbox.SuspendLayout();
             this.menu1RangeShop.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabRange.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRange)).BeginInit();
             this.tabCashbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCashbox)).BeginInit();
             this.tabPersonalOrder.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,7 +153,7 @@
             // tabRange
             // 
             this.tabRange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabRange.Controls.Add(this.label11);
+            this.tabRange.Controls.Add(this.dgvRange);
             this.tabRange.Location = new System.Drawing.Point(4, 5);
             this.tabRange.Name = "tabRange";
             this.tabRange.Padding = new System.Windows.Forms.Padding(3);
@@ -159,16 +161,32 @@
             this.tabRange.TabIndex = 0;
             this.tabRange.Text = "tabRange";
             // 
+            // dgvRange
+            // 
+            this.dgvRange.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRange.Location = new System.Drawing.Point(6, 6);
+            this.dgvRange.Name = "dgvRange";
+            this.dgvRange.Size = new System.Drawing.Size(510, 316);
+            this.dgvRange.TabIndex = 0;
+            // 
             // tabCashbox
             // 
             this.tabCashbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabCashbox.Controls.Add(this.label12);
+            this.tabCashbox.Controls.Add(this.dgvCashbox);
             this.tabCashbox.Location = new System.Drawing.Point(4, 5);
             this.tabCashbox.Name = "tabCashbox";
             this.tabCashbox.Padding = new System.Windows.Forms.Padding(3);
             this.tabCashbox.Size = new System.Drawing.Size(522, 328);
             this.tabCashbox.TabIndex = 1;
             this.tabCashbox.Text = "tabPage2";
+            // 
+            // dgvCashbox
+            // 
+            this.dgvCashbox.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCashbox.Location = new System.Drawing.Point(3, 1);
+            this.dgvCashbox.Name = "dgvCashbox";
+            this.dgvCashbox.Size = new System.Drawing.Size(517, 321);
+            this.dgvCashbox.TabIndex = 0;
             // 
             // tabPersonalOrder
             // 
@@ -333,32 +351,13 @@
             this.label4.Size = new System.Drawing.Size(57, 18);
             this.label4.TabIndex = 0;
             this.label4.Text = "Ф.И.О.";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(149, 118);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(204, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "тут будет таблица Ассортимент из БД ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(205, 136);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "тут будет таблица Касса";
             // 
             // frmShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(684, 412);
+            this.ClientSize = new System.Drawing.Size(684, 441);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menu3PersonalOrder);
             this.Controls.Add(this.menu2Cashbox);
@@ -376,9 +375,9 @@
             this.menu1RangeShop.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabRange.ResumeLayout(false);
-            this.tabRange.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRange)).EndInit();
             this.tabCashbox.ResumeLayout(false);
-            this.tabCashbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCashbox)).EndInit();
             this.tabPersonalOrder.ResumeLayout(false);
             this.tabPersonalOrder.PerformLayout();
             this.ResumeLayout(false);
@@ -413,7 +412,7 @@
         private System.Windows.Forms.TextBox txtBoxGoods;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBoxPhone;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dgvRange;
+        private System.Windows.Forms.DataGridView dgvCashbox;
     }
 }
