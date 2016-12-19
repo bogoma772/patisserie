@@ -9,3 +9,6 @@ C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopPro
 C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.frmMainEnter.resources
 C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.frmWorkshop.resources
 C:\Users\Olga\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.frmShop.resources
+C:\Users\1\patisserie\candyshop\candyshopProject\candyshopProject\bin\Debug\candyshopProject.exe.config
+C:\Users\1\patisserie\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.exe
+C:\Users\1\patisserie\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.pdb
