@@ -22,3 +22,6 @@ C:\Users\Olga\patisserie\candyshop\candyshopProject\candyshopProject\obj\Debug\c
 C:\Users\Olga\patisserie\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.frmStock.resources
 C:\Users\Olga\patisserie\candyshop\candyshopProject\candyshopProject\bin\Debug\MySql.Data.dll
 C:\Users\Olga\patisserie\candyshop\candyshopProject\candyshopProject\bin\Debug\MySql.Data.xml
+C:\Users\1\patisserie\candyshop\candyshopProject\candyshopProject\bin\Debug\candyshopProject.exe.config
+C:\Users\1\patisserie\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.exe
+C:\Users\1\patisserie\candyshop\candyshopProject\candyshopProject\obj\Debug\candyshopProject.pdb
