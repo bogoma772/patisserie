@@ -17,12 +17,15 @@ public class shopSubsystem
 
     public void ShowFrm() // показываем форму
     {
-        // надо ли?
+        myFormShop.frmShop_Load(myDbProvider);
+        myFormShop.ShowDialog();
+        
     }
 
     public shopSubsystem(dbProvider currentDbProvider) { // конструктор
         // создаем форму myFormShop
         myDbProvider = currentDbProvider; // передаем ссылку на Ѕƒ коннектор
+        myFormShop = new frmShop();
     }
 
 

@@ -14,6 +14,10 @@ namespace candyshopProject
 {
     public partial class FrmMainEnter : Form
     {
+        protected string subsystem;
+        protected authenticationComponent authComp;
+        protected candyshopFacade facade;
+
         public FrmMainEnter()
         {
             InitializeComponent();
@@ -30,72 +34,66 @@ namespace candyshopProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            // TO DO LIST
+            // Задачи
+            //"Цех"
+            //1.Построение графиков - будем ли делать?
+            //2.Добавление в БД: через текстбоксы. вызываем процедуру insertquery(нужно написать по аналогии с mysqlquery)
+            //3.Удаление по номеру записи: вызываем процедуру deletequery(нужно написать по аналогии с mysqlquery)
+            //"Магазин"
+            //4.Добавление индвидуальных заказов(аналогично п.2)
+            //5.Касса(аналогично п.2 + п.3) - как именно это будет выглядеть, нужно обсудить
+            //"Общее"
+            //6.сохранить пароли пользователей в БД в виде хэшей, воспользовавшись функцией получения хэша, которая используется в authentificationComponent
+            // END OF TO DO LIST
+         facade = new candyshopFacade();
+            authComp = new authenticationComponent(facade.PropDbProvider);
 
         }
 
-        public Guid GetHashString(string s)
-        {
-            //переводим строку в байт-массим  
-            byte[] bytes = Encoding.Unicode.GetBytes(s);
-
-            //создаем объект для получения средст шифрования  
-            MD5CryptoServiceProvider CSP =
-                new MD5CryptoServiceProvider();
-
-            //вычисляем хеш-представление в байтах  
-            byte[] byteHash = CSP.ComputeHash(bytes);
-
-            string hash = string.Empty;
-
-            //формируем одну цельную строку из массива  
-            foreach (byte b in byteHash)
-                hash += string.Format("{0:x2}", b);
-
-            return new Guid(hash);
-        }
         private void btnMainEnter_Click(object sender, EventArgs e)
         {
             string username;
-            username = txtBoxUserName.Text.ToString();
+            string userpas;
+            username = txtBoxUserName.Text;
+            userpas = txtBoxPassword.Text;
             
-            switch (username)
+            if (radioButton1.Checked == true)
             {
-                case "shop":
-                    {
-                        frmShop f = new frmShop();
-                        f.ShowDialog();
-                        break;
-                    }
-                case "workshop":
-                    {
-                        frmStock f = new frmStock();
-                        f.ShowDialog();
-                        break;
-                    }
-             }
-           
-                
+                subsystem = "users_stock";
+            }
+            if (radioButton2.Checked == true)
+            {
+                subsystem = "users_shop";
+            }
+            bool tr = true; // служебная переменная для работы заглушки
+            // if (authComp.CheckUser(username, userpas, subsystem) == true)
+            if (tr == true) // заглушка
+            {
+                switch (subsystem)
+                {
+                    case "users_stock":
+                        {
+                            facade.PropStockSubsystem.ShowFrm();
+                            break;
+                        }
+                    case "users_shop":
+                        {
+                            facade.PropShopSubsystem.ShowFrm();
+                            break;
+                        }
+                }
+             
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label6.Text = "";
-            string pas1 = "abcd";
-            string pas2 = "Abcd";
-            label5.Text = GetHashString(pas1).ToString();
-            label6.Text = GetHashString(pas2).ToString();
-            if (label5.Text == label6.Text)
-            {
-
-                label7.Text = "TRUE!!!!!!!!!";
-
-            }
-            else
-            {
-                label7.Text = "false!!!((";
-            }
-
+           
         }
+
+       
+
+       
     }
 }

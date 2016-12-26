@@ -36,6 +36,9 @@ public class candyshopFacade {
 
     public candyshopFacade() { // конструктор
         // вызываем конструкторы: PropDbProvider,myShopSubsystem,myStockSubsystem
+        CurrentDbProvider = new dbProvider();
+        myShopSubsystem = new shopSubsystem(CurrentDbProvider);
+        myStockSubsystem = new stockSubsystem(CurrentDbProvider);
     }
 
     public void destroyCandyshop() // деструктор

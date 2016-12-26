@@ -39,9 +39,9 @@
             this.tabRange = new System.Windows.Forms.TabPage();
             this.tabPersOrder = new System.Windows.Forms.TabPage();
             this.tabStats = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dgvRangeStock = new System.Windows.Forms.DataGridView();
+            this.dgvIndOrder = new System.Windows.Forms.DataGridView();
             this.menu1Range.SuspendLayout();
             this.menu2PersonalOrder.SuspendLayout();
             this.menu3Stats.SuspendLayout();
@@ -49,6 +49,8 @@
             this.tabRange.SuspendLayout();
             this.tabPersOrder.SuspendLayout();
             this.tabStats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRangeStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIndOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // menu1Range
@@ -59,7 +61,7 @@
             this.menu1Range.Name = "menu1Range";
             this.menu1Range.Size = new System.Drawing.Size(237, 40);
             this.menu1Range.TabIndex = 0;
-            this.menu1Range.Click += new System.EventHandler(this.panel1_Click);
+            this.menu1Range.Click += new System.EventHandler(this.menu1Range_Click);
             // 
             // label1
             // 
@@ -71,7 +73,6 @@
             this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Ассортимент";
-            this.label1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // menu2PersonalOrder
             // 
@@ -136,7 +137,7 @@
             // tabRange
             // 
             this.tabRange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabRange.Controls.Add(this.label6);
+            this.tabRange.Controls.Add(this.dgvRangeStock);
             this.tabRange.Location = new System.Drawing.Point(4, 5);
             this.tabRange.Name = "tabRange";
             this.tabRange.Padding = new System.Windows.Forms.Padding(3);
@@ -147,7 +148,7 @@
             // tabPersOrder
             // 
             this.tabPersOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabPersOrder.Controls.Add(this.label4);
+            this.tabPersOrder.Controls.Add(this.dgvIndOrder);
             this.tabPersOrder.Location = new System.Drawing.Point(4, 5);
             this.tabPersOrder.Name = "tabPersOrder";
             this.tabPersOrder.Padding = new System.Windows.Forms.Padding(3);
@@ -165,15 +166,6 @@
             this.tabStats.TabIndex = 2;
             this.tabStats.Text = "tabPage3";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(145, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "тут будет таблица Инд.заказы из БД";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -183,16 +175,23 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Тут можно получить статистику";
             // 
-            // label6
+            // dgvRangeStock
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(163, 136);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Тут будет таблица Ассортимент из БД";
+            this.dgvRangeStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRangeStock.Location = new System.Drawing.Point(5, 5);
+            this.dgvRangeStock.Name = "dgvRangeStock";
+            this.dgvRangeStock.Size = new System.Drawing.Size(514, 320);
+            this.dgvRangeStock.TabIndex = 1;
             // 
-            // frmWorkshop
+            // dgvIndOrder
+            // 
+            this.dgvIndOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIndOrder.Location = new System.Drawing.Point(4, 7);
+            this.dgvIndOrder.Name = "dgvIndOrder";
+            this.dgvIndOrder.Size = new System.Drawing.Size(515, 318);
+            this.dgvIndOrder.TabIndex = 0;
+            // 
+            // frmStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,9 +204,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmWorkshop";
+            this.Name = "frmStock";
             this.Text = "Цех";
             this.TransparencyKey = System.Drawing.SystemColors.WindowFrame;
+            this.Load += new System.EventHandler(this.frmStock_Load);
             this.menu1Range.ResumeLayout(false);
             this.menu1Range.PerformLayout();
             this.menu2PersonalOrder.ResumeLayout(false);
@@ -216,11 +216,11 @@
             this.menu3Stats.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabRange.ResumeLayout(false);
-            this.tabRange.PerformLayout();
             this.tabPersOrder.ResumeLayout(false);
-            this.tabPersOrder.PerformLayout();
             this.tabStats.ResumeLayout(false);
             this.tabStats.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRangeStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIndOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,8 +237,8 @@
         private System.Windows.Forms.TabPage tabRange;
         private System.Windows.Forms.TabPage tabPersOrder;
         private System.Windows.Forms.TabPage tabStats;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dgvRangeStock;
+        private System.Windows.Forms.DataGridView dgvIndOrder;
     }
 }
