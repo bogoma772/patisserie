@@ -1,0 +1,11 @@
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\bin\Debug\UnitTestСandyshopProject.dll
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\bin\Debug\UnitTestСandyshopProject.pdb
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\bin\Debug\candyshopProject.exe
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\bin\Debug\MySql.Data.dll
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\bin\Debug\candyshopProject.pdb
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\bin\Debug\MySql.Data.xml
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\obj\Debug\UnitTestСandyshopProject.csprojResolveAssemblyReference.cache
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\obj\Debug\UnitTestСandyshopProject.dll
+C:\Users\Olga\patisserie\candyshop\candyshopProject\UnitTestСandyshopProject\obj\Debug\UnitTestСandyshopProject.pdb
