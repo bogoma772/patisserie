@@ -37,20 +37,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabRange = new System.Windows.Forms.TabPage();
+            this.dgvRangeStock = new System.Windows.Forms.DataGridView();
             this.tabPersOrder = new System.Windows.Forms.TabPage();
+            this.dgvIndOrder = new System.Windows.Forms.DataGridView();
             this.tabStats = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvRangeStock = new System.Windows.Forms.DataGridView();
-            this.dgvIndOrder = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menu1Range.SuspendLayout();
             this.menu2PersonalOrder.SuspendLayout();
             this.menu3Stats.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabRange.SuspendLayout();
-            this.tabPersOrder.SuspendLayout();
-            this.tabStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRangeStock)).BeginInit();
+            this.tabPersOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIndOrder)).BeginInit();
+            this.tabStats.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu1Range
@@ -145,6 +147,14 @@
             this.tabRange.TabIndex = 0;
             this.tabRange.Text = "tabRangeWS";
             // 
+            // dgvRangeStock
+            // 
+            this.dgvRangeStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRangeStock.Location = new System.Drawing.Point(5, 5);
+            this.dgvRangeStock.Name = "dgvRangeStock";
+            this.dgvRangeStock.Size = new System.Drawing.Size(514, 320);
+            this.dgvRangeStock.TabIndex = 1;
+            // 
             // tabPersOrder
             // 
             this.tabPersOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -155,6 +165,14 @@
             this.tabPersOrder.Size = new System.Drawing.Size(522, 328);
             this.tabPersOrder.TabIndex = 1;
             this.tabPersOrder.Text = "tabPage2";
+            // 
+            // dgvIndOrder
+            // 
+            this.dgvIndOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIndOrder.Location = new System.Drawing.Point(4, 7);
+            this.dgvIndOrder.Name = "dgvIndOrder";
+            this.dgvIndOrder.Size = new System.Drawing.Size(515, 318);
+            this.dgvIndOrder.TabIndex = 0;
             // 
             // tabStats
             // 
@@ -175,28 +193,34 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Тут можно получить статистику";
             // 
-            // dgvRangeStock
+            // button1
             // 
-            this.dgvRangeStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRangeStock.Location = new System.Drawing.Point(5, 5);
-            this.dgvRangeStock.Name = "dgvRangeStock";
-            this.dgvRangeStock.Size = new System.Drawing.Size(514, 320);
-            this.dgvRangeStock.TabIndex = 1;
+            this.button1.Location = new System.Drawing.Point(475, 406);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 26);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dgvIndOrder
+            // button2
             // 
-            this.dgvIndOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIndOrder.Location = new System.Drawing.Point(4, 7);
-            this.dgvIndOrder.Name = "dgvIndOrder";
-            this.dgvIndOrder.Size = new System.Drawing.Size(515, 318);
-            this.dgvIndOrder.TabIndex = 0;
+            this.button2.Location = new System.Drawing.Point(496, 438);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(116, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(684, 412);
+            this.ClientSize = new System.Drawing.Size(684, 459);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menu3Stats);
             this.Controls.Add(this.menu2PersonalOrder);
@@ -216,11 +240,11 @@
             this.menu3Stats.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabRange.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRangeStock)).EndInit();
             this.tabPersOrder.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIndOrder)).EndInit();
             this.tabStats.ResumeLayout(false);
             this.tabStats.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRangeStock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIndOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +264,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvRangeStock;
         private System.Windows.Forms.DataGridView dgvIndOrder;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

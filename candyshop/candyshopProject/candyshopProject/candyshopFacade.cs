@@ -20,7 +20,9 @@ public class candyshopFacade {
         set { value = CurrentDbProvider; }
     }
     
-    private shopSubsystem myShopSubsystem; 
+    private shopSubsystem myShopSubsystem;
+
+    public authenticationComponent myAuthComp;
 
     public shopSubsystem PropShopSubsystem // cвойство для доступа
     {
@@ -39,6 +41,9 @@ public class candyshopFacade {
         CurrentDbProvider = new dbProvider();
         myShopSubsystem = new shopSubsystem(CurrentDbProvider);
         myStockSubsystem = new stockSubsystem(CurrentDbProvider);
+        myAuthComp = new authenticationComponent(CurrentDbProvider);
+
+        
     }
 
     public void destroyCandyshop() // деструктор

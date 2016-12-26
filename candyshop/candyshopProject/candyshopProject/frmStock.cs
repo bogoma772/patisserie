@@ -35,7 +35,7 @@ namespace candyshopProject
             tabControl1.SelectedTab = tabPersOrder;
             string sql;
             sql = "SELECT i.id_order,sh.address,p.name_product,i.weight,i.amount,i.date_order,i.date_ready,i.comment_order FROM indiv_order i join shop sh on i.code_shop = sh.id_shop join products p on i.code_product = p.id_product;";
-            formDBProvider.mysqlQuery(dgvIndOrder, sql);
+            formDBProvider.loadTable(dgvIndOrder, sql);
             dgvIndOrder.Refresh();
             dgvIndOrder.Columns[0].HeaderText = "№";
             dgvIndOrder.Columns[1].HeaderText = "магазин";
@@ -91,7 +91,21 @@ namespace candyshopProject
 
         private void frmStock_Load(object sender, EventArgs e)
         {
-
+          
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formDBProvider.AddRecord(dgvRangeStock, "products");
+            //string sql1 = "SELECT FROM products"; 
+            //strung sql = "INSERT INTO products (id_product, name_product, code_category) values(13, 'pirozhok', 1)"; 
+            formDBProvider.updateTable(dgvRangeStock, "products");
+            button1.Text = "success";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dgvRangeStock.Rows.Add();
+        }        
     }
 }

@@ -48,7 +48,7 @@ namespace candyshopProject
 
             string sql;
             sql = "SELECT p.name_product, s.date_production, s.date_realization,s.status_goods FROM stock s join products p on s.code_product = p.id_product;";
-            formDBProvider.mysqlQuery(dgvCashbox, sql);
+            formDBProvider.loadTable(dgvCashbox, sql);
             dgvCashbox.Refresh();
             dgvCashbox.Columns[0].HeaderText = "название продукта";
             dgvRange.Columns[1].HeaderText = "дата изготовления";
